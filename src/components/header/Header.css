@@ -1,0 +1,85 @@
+.header {
+    height: 70px;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(135deg, #141e30, #243b55);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: #00d4ff;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+/* LINKS */
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* línea animada debajo */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00d4ff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}

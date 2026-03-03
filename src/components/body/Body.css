@@ -1,0 +1,223 @@
+/* ======= CONTENEDOR PRINCIPAL ======= */
+.schedule-container {
+  padding: 30px;
+  text-align: center;
+  background: #f4f7fb;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #243b55;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* ======= TABLA ======= */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 900px;
+}
+
+.schedule-table thead {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+}
+
+.schedule-table th {
+  padding: 14px;
+  font-size: 14px;
+}
+
+.schedule-table td {
+  border: 1px solid #edf2f7;
+  width: 120px;
+  height: 70px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hora {
+  font-weight: bold;
+  background: #f0f4f8;
+  color: #243b55;
+  width: 90px;
+}
+
+/* ======= BLOQUES ======= */
+.bloque {
+  background-color: #243b55;
+  color: white;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  text-align: center;
+  animation: aparecer 0.25s ease;
+}
+
+.continuacion {
+  border-radius: 0;
+}
+
+.bloque-hora {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.bloque-medico {
+  font-weight: 600;
+}
+
+.bloque-especialidad {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.bloque-consultorio {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.schedule-table tbody tr:hover {
+  background: #f9fbff;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ======= MODAL ======= */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 59, 85, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal h3 {
+  margin: 0 0 10px 0;
+  color: #243b55;
+}
+
+.modal label {
+  font-size: 14px;
+  color: #243b55;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-buttons button:first-child {
+  background-color: #243b55;
+  color: white;
+}
+
+.modal-buttons button:first-child:hover {
+  background-color: #1b2a42;
+}
+
+.modal-buttons button:last-child {
+  background-color: #f0f4f8;
+  color: #243b55;
+}
+
+.modal-buttons button:last-child:hover {
+  background-color: #d9e1eb;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 900px) {
+  .schedule-container {
+    padding: 15px;
+  }
+
+  .schedule-table td, .schedule-table th {
+    width: 90px;
+    height: 60px;
+  }
+}
+
+.bloque {
+  background-color: #243b55;
+  color: white;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  text-align: center;
+  animation: aparecer 0.25s ease;
+}
