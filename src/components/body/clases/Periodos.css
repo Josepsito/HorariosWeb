@@ -1,0 +1,104 @@
+/* src/components/periodos/Periodos.css */
+
+.periodos-container {
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.periodos-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.periodo-form {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  background-color: #f9f9f9;
+}
+
+.periodo-form h3 {
+  margin-bottom: 15px;
+}
+
+.periodo-form input {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.periodo-form input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-buttons button:first-child {
+  background-color: #4a90e2;
+}
+
+.form-buttons button:last-child {
+  background-color: #999;
+}
+
+.periodos-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.periodos-list th, .periodos-list td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.periodos-list th {
+  background-color: #f2f2f2;
+}
+
+.periodos-list tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.periodos-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+.periodos-list button {
+  padding: 4px 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.periodos-list button:first-child {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.periodos-list button:last-child {
+  background-color: #e74c3c;
+  color: #fff;
+}

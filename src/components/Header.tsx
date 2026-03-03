@@ -5,9 +5,10 @@ function Header(){
         <header className="header">
             <h1 className="logo">Sistema Medico</h1>
             <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Servicios</a>
-                <a href="#">Login</a>
+                <a href="/usuarios">Usuarios</a>
+                <a href="/horarios">Horarios</a>
+                <a href="/medicos">Medicos</a>
+                <a href="/periodos">Periodos</a>
             </nav>
         </header>
         </>)
